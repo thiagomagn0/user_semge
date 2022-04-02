@@ -1,0 +1,255 @@
+
+body { padding: 15px; background:#eee; font-family: Arial,
+    Helvetica, sans-serif }
+    
+    .caixa {
+        border: solid 1px #666;
+        padding: 5px 10px;
+        margin: 40px;
+    }
+    
+    .area-visivel span {
+        color: #666;
+        display: none;
+    }
+    
+    /* max-width  */
+    @media screen and (max-width: 600px) {
+        .um {
+            background: #F9C;
+        }
+        span.lt600 {
+            display: inline-block;
+        }
+    }
+    
+    /* min-width */
+    @media screen and (min-width: 900px) {
+        .dois {
+            background: #F90;
+        }
+        span.gt900 {
+            display: inline-block;
+        }
+    }
+    
+    /* min-width & max-width */
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        .tres {
+            background: #9CF;
+        }
+        span.bt600-900 {
+            display: inline-block;
+        }
+    }
+    
+    /* max device width */
+    @media screen and (max-device-width: 480px) {
+        .iphone {
+            background: #ccc;
+        }
+    }
+    
+    
+    
+      
+      @media (min-width:300px) and (max-width:500px){
+      .tamlogo{
+        margin-left:5%;
+        width:90%;
+      }
+    }
+    
+    
+    /* Ramais */
+    header {
+        height: 100%;
+        min-height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        
+      }
+      
+      header img {
+        max-width: 550px;
+        margin-bottom: 20px;
+      }
+      
+      table {
+        width: 100%;
+        table-layout: fixed;
+        box-shadow: -0.5em 0 0.4em rgb(59, 59, 59);
+      }
+      .tbl-header {
+        background-color: rgb(117, 114, 114);
+        
+      }
+      .tbl-content {
+        height: 500px;
+        overflow-x: auto;
+        margin-top: 0px;
+        border: 1px solid #152614;
+        box-shadow: -0.5em 0 0.4em rgb(59, 59, 59);
+        background-color: rgb(248, 248, 248);
+      }
+      th {
+        padding: 20px 15px;
+        text-align: center;
+        font-weight: 500;
+        /* font-family: "Roboto"; */
+        font-size: 16px;
+        color: #152614;
+        text-transform: uppercase;
+      }
+      
+      th.coz {
+        color: #ffffff;
+        font-style: normal;
+       /*  font-family: "Roboto"; */
+        font-size: 18px;
+        text-align: center;
+      }
+      
+      td {
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 700;
+        /* font-family: "Roboto"; */
+        font-size: 16px;
+        color: #152614;
+        border-bottom: solid 1px #152614;
+        cursor: pointer;
+      }
+      
+      tr {
+        transition: background 500ms ease-in-out;
+      }
+      
+      tr:hover {
+        background-color: #33333370;
+      }
+      
+      tr.fixo {
+        background-color: #152614;
+      }
+      
+      .btn-outline-primary {
+        color: #ffffff;
+        background-color: #152614;
+        background-image: none;
+        border-color: #152614;
+      }
+      
+      /* demo styles */
+      
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+      body {
+        background: -webkit-linear-gradient(left, #be1818, #521818);
+        background: linear-gradient(to right, #b4b4b4, #ffffff);
+        font-family: "Roboto", sans-serif;
+      }
+      section {
+        margin: 50px;
+      }
+      
+      /* follow me template  Desenvolvido por*/ 
+      .made-with-love {
+        margin-top: 40px;
+        padding: 10px;
+        clear: left;
+        text-align: center;
+        font-size: 10px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+      }
+      .made-with-love i {  /* icone C */
+        font-style: normal;
+        color: #030303;
+        font-size: 14px;
+        font-family: "Roboto";
+        position: relative;
+        top: 2px;
+      }
+      .made-with-love a {
+        color: rgb(116, 116, 116);
+        text-decoration: none;
+      }
+      .made-with-love a:hover {
+        text-decoration: underline;
+      }
+      
+      /* for custom scrollbar for webkit browser*/
+      
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px #152614;
+      }
+      ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6px #152614;
+      }
+      
+      #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 14px;
+        background-repeat: no-repeat;
+        background: linear-gradient(90deg, #ffffff, #8a8a8a 100%);
+        width: 95.1%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px none #eb0d0d;
+        margin-bottom: 0px;
+        color: rgb(0, 0, 0); /* texto de pesquisa */
+      }
+      
+      /* Botao LOJAS */
+      
+      .button {
+        position: fixed;
+        border-radius: 4px;
+        background-color: #152614;
+        border: none;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 19px;
+        padding: 20px;
+        width: 180px;
+        height: 60px;
+        bottom: 25px;
+        right: 53px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        box-shadow: -0.5em 0 0.4em rgb(59, 59, 59);
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -30px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }    
