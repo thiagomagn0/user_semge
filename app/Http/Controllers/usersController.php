@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateusersRequest;
 use App\Repositories\usersRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use DB;
 use Flash;
 use Response;
 use Hash;
@@ -31,6 +32,10 @@ class usersController extends Controller
     public function index(Request $request)
     {
         $users = $this->usersRepository->all();
+
+        
+        
+
 
         
 

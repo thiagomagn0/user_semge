@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('cpf')->nullable();
             $table->string('birth_date')->nullable();
-            $table->integer('phone')->nullable();
+            $table->string('phone')->nullable();
             $table->boolean('admin')->nullable();
             $table->boolean('supervisor')->nullable();
             $table->boolean('operator')->nullable();

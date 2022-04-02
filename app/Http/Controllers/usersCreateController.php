@@ -11,6 +11,8 @@ class usersCreateController extends Controller
     public function save(Request $request){
 
         $input=$request->all();
+
+    
        
         $input['password'] = \Hash::make($input['password']); // ou bcrypt($data['senha']);
      
@@ -19,7 +21,13 @@ class usersCreateController extends Controller
             ['email' => $input['email'], 
             'name' =>  $input['name'],
             'password'=> $input['password'],
-            'cpf'=> $input['cpf']
+            'cpf'=> $input['cpf'],
+            'admin'=> $input['admin'],
+            'supervisor'=> $input['supervisor'],
+            'phone'=> $input['phone'],
+            'operator'=> $input['operator'],
+            'birth_date'=> $input['birth_date'],
+
         
             ]   
         );
@@ -37,6 +45,7 @@ class usersCreateController extends Controller
                 'zip_code'=> $input['cep'],
                 'country'=> $input['country'],
                 'city'=> $input['city'],
+                'district'=> $input['district'],
                 'user_id'=> $ultimoUser[0]->id,
 
                 ]
@@ -48,4 +57,12 @@ class usersCreateController extends Controller
         return redirect(route('users.index'));  
 
     }
+    public function enDereco()
+{      
+    $addresses=DB::table('addresses')
+    ->get();
+
+    return view('users.table')
+            ->with('users', $addresses);
+}
 }

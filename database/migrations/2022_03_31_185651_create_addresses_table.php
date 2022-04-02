@@ -18,10 +18,11 @@ class CreateAddressesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('street');
-            $table->string('complement');
-            $table->string('number');
+            $table->string('complement')->nullable();
+            $table->string('number')->nullable();
             $table->string('city');
             $table->string('state');
+            $table->string('district');
             $table->string('country');
             $table->integer('zip_code');
             $table->timestamps();

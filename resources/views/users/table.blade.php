@@ -23,6 +23,7 @@
                 <th>CEP</th>
                 <th>Rua</th>
                 <th>Complemento</th>
+                <th>Bairro</th>
                 <th>Número</th>
                 <th>Cidade</th>
                 <th>Estado</th>
@@ -39,14 +40,26 @@
             <td>{{ $users->cpf }}</td>
             <td>{{ $users->birth_date }}</td>
             <td>{{ $users->phone }}</td>
-            <td>{{ $users->admin }}</td>
-            <td>CEP</td>
-            <td>RUA</td>
-            <td>COMPLEMENTO</td>
-            <td>NUMERO</td>
-            <td>CIDADE</td>
-            <td>ESTADO</td>
-            <td>PAIS</td>
+            @if($users->admin == 1)
+                <td><span class="badge badge-success">Administrador</span></td>
+                @elseif($users->supervisor ==1)
+                <td><span class="badge badge-danger">Supervisor</span></td>
+                @elseif($users->operator ==1)
+                <td><span class="badge badge-danger">Oprador</span></td>
+                @else
+                <td><span class="badge badge-danger">Sem Perfill Atribuído</span></td>
+                @endif
+
+                
+                
+            <td>321</td>
+            <td>Rua</td>
+            <td>Complemento</td>
+            <td>Bairro</td>
+            <td>numero</td>
+            <td>Salvador</td>
+            <td>Estado</td>
+            <td>País</td>
             <td width="120">
                     {!! Form::open(['route' => ['users.destroy', $users->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
@@ -61,6 +74,7 @@
                     {!! Form::close() !!}
                 </td>
             </tr>
+            
         @endforeach
         </tbody>
     </table>
