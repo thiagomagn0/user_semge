@@ -31,7 +31,7 @@ $ cp .env.example .env
 
 - Instale todas as dependencias ([composer](http://getcomposer.org))
 ```
-$ composer install ou compoer update
+$ composer install e composer update
 ```
 
 - Gere uma nova key
